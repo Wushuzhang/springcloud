@@ -1,0 +1,21 @@
+server:
+  port: 8801
+
+spring:
+  application:
+    name: cloud-stream-provider
+  rabbitmq:
+    host: 192.168.254.128
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: studyExchange
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
+  instance:
+    instance-id: send-8801
+    prefer-ip-address: true
